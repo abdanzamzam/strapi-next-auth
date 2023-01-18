@@ -50,6 +50,8 @@ export default function Login() {
 
     if (res.jwt) {
       nookies.set(null, "token", res.jwt);
+      nookies.set(null, "status_login", "success");
+
       Router.replace("/dashboard");
     }
 
